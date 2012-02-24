@@ -11,7 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120221115932) do
+ActiveRecord::Schema.define(:version => 20120224102701) do
+
+  create_table "listings", :force => true do |t|
+    t.string   "title"
+    t.text     "description"
+    t.float    "price"
+    t.integer  "user_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "listings", ["user_id"], :name => "index_listings_on_user_id"
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -25,6 +36,20 @@ ActiveRecord::Schema.define(:version => 20120221115932) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "tagships", :id => false, :force => true do |t|
+    t.integer "tag_id"
+    t.integer "listing_id"
+  end
+
+  add_index "tagships", ["listing_id"], :name => "index_tagships_on_listing_id"
+  add_index "tagships", ["tag_id"], :name => "index_tagships_on_tag_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "", :null => false

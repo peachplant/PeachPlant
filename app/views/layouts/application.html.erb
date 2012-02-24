@@ -8,10 +8,18 @@
 </head>
 <body>
 
+<%= render 'layouts/topbar' %>
+
 <p class="notice"><%= notice %></p>
 <p class="alert"><%= alert %></p>
 
-<%= yield %>
+<div id="main" role="main">
+  <%= yield %>
+</div>
+
+<footer>
+    Footer?
+</footer>
 
 </body>
 </html>
