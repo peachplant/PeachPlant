@@ -41,6 +41,7 @@ class ListingsController < ApplicationController
   # POST /listings.json
   def create
     @listing = Listing.new(params[:listing])
+    @listing.user = current_user
 
     respond_to do |format|
       if @listing.save
@@ -57,7 +58,6 @@ class ListingsController < ApplicationController
   # PUT /listings/1.json
   def update
     @listing = Listing.find(params[:id])
-    @listing.user = current_user
 
     respond_to do |format|
       if @listing.update_attributes(params[:listing])
