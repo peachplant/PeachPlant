@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120224102701) do
+ActiveRecord::Schema.define(:version => 20120225221208) do
 
   create_table "listings", :force => true do |t|
     t.string   "title"
@@ -43,9 +43,11 @@ ActiveRecord::Schema.define(:version => 20120224102701) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "tagships", :id => false, :force => true do |t|
-    t.integer "tag_id"
-    t.integer "listing_id"
+  create_table "tagships", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "listing_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "tagships", ["listing_id"], :name => "index_tagships_on_listing_id"
