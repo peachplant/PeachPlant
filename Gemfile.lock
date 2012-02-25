@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/sferik/rails_admin.git
-  revision: 00984918e3fc49de3a115548fafd2a624304a6a8
+  revision: e8f7be22a219015b4bbfa016b3fdb118b9001067
   specs:
     rails_admin (0.0.1)
       bbenezech-nested_form (~> 0.0.5)
@@ -16,7 +16,7 @@ GIT
       sass-rails (~> 3.1)
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     actionmailer (3.2.1)
       actionpack (= 3.2.1)

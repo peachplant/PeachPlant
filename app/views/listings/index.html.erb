@@ -16,7 +16,7 @@
     <td><%= listing.title %></td>
     <td><%= listing.description %></td>
     <td><%= listing.price %></td>
-    <td><%= listing.user %></td>
+    <td><%= listing.user.email %></td>
     <td><%= link_to 'Show', listing %></td>
     <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
     <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>

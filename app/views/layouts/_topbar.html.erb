@@ -7,12 +7,9 @@
           <%= link_to 'Home', root_path %>
         </li>
         <li>
-          <%= link_to 'Browse', '#' %>
+          <%= link_to 'Browse', listings_path %>
         </li>
         <% if user_signed_in? %>
-          <li>
-            <%= link_to current_user.email, current_user %>
-          </li>
           <li>
             <%= link_to('Edit account', edit_user_registration_path) %>
           </li>
