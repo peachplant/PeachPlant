@@ -1,30 +1,22 @@
 <header>
-  <div id="header-items">
-    <div id="header-title"><%= link_to 'PeachPlant', root_path %></div>
-    <nav>
-      <ul>
-        <li>
-          <%= link_to 'Home', root_path %>
-        </li>
-        <li>
-          <%= link_to 'Browse', listings_path %>
-        </li>
-        <% if user_signed_in? %>
-          <li>
-            <%= link_to('Edit account', edit_user_registration_path) %>
-          </li>
-          <li>
-            <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
-          </li>
-        <% else %>
-          <li>
-            <%= link_to('Login', new_user_session_path) %>
-          </li>
-          <li>
-            <%= link_to('Sign up', new_user_registration_path) %>
-          </li>
-        <% end %>
-      </ul>
-    </nav>
+  <div id="right-box">
+    <div id="user-form">
+      <% if user_signed_in? %>
+          <%= link_to('Edit account', edit_user_registration_path) %>
+          <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+      <% else %>
+          <%= link_to('Login', new_user_session_path) %>
+          <%= link_to('Sign up', new_user_registration_path) %>
+      <% end %>
+    </div>
+    <form>
+      <div id="search-bar">
+        <input name="search" type="text" />
+      </div>
+    </form>
   </div>
+  <nav>
+    <%= link_to image_tag("/assets/peachie.png"), root_path %>
+    <h1>peach<span class="plant-heading">plant</span></h1>
+  </nav>
 </header>
