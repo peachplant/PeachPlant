@@ -7,6 +7,8 @@ PeachPlant::Application.routes.draw do
   devise_for :users, :controllers => { :registrations => "registrations" }
   match "/users/:id" => "users#show", :as => :user
 
+  match "/search" => "search#search", :as => :search
+
   root :to => "home#index"
 
   # The priority is based upon order of creation:

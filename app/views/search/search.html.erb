@@ -1,0 +1,11 @@
+<h1>Searches for:</h1>
+
+<h2><%= @query %></h2>
+
+<div id="search-results">
+  <ul>
+    <% @results.each do |listing| %>
+      <%=  render listing %>
+    <% end %>
+  </ul>
+</div>

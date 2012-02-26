@@ -4,17 +4,18 @@
       <% if user_signed_in? %>
           <%= link_to current_user.first_name + "'s account", current_user %>
           <%= link_to('Edit account', edit_user_registration_path) %>
-          <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
+          <%= link_to('Logout', destroy_user_session_path, :method => 'delete') %>
       <% else %>
           <%= link_to('Login', new_user_session_path) %>
           <%= link_to('Sign up', new_user_registration_path) %>
       <% end %>
     </div>
-    <form>
-      <div id="search-bar">
-        <input name="search" type="text" />
-      </div>
-    </form>
+    <div id="search-bar">
+      <%= form_tag("/search", :method => "post") do %>
+        <%= text_field_tag(:query, params[:query]) %>
+        <%= image_submit_tag("/assets/search_button.png", :name => nil) %>
+      <% end %>
+    </div>
   </div>
   <nav>
     <%= link_to image_tag("/assets/peachie.png"), root_path %>
