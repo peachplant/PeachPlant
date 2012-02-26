@@ -1,7 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<%= render @listing %>
+<div id="listing">
+  <div id="listing-image"><img src="img/jeans.jpg" alt="Jeans" /></div>
+  <div id="listing-header">
+    <span id="title"><%= @listing.title %></span>
+    <span id="price"><%= @listing.price %></span>
+  </div>
 
+  <span id="listing-desc"><%= @listing.description %></span>
+</div>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>

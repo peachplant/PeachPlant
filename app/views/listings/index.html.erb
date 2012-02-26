@@ -1,29 +1,16 @@
-<h1>Listing listings</h1>
+<h2>Listings</h2>
 
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Description</th>
-    <th>Price</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<div id="search-results">
+  <ul>
+  <% @listings.each do |listing| %>
+  <li>
+    <%= link_to('Show', listing) %>
+      <img src="" alt=""/>
+      <div><span><%= listing.title %></span><span><%= listing.price %></span></div>
 
-<% @listings.each do |listing| %>
-  <tr>
-    <td><%= listing.title %></td>
-    <td><%= listing.description %></td>
-    <td><%= listing.price %></td>
-    <td><%= listing.user.email %></td>
-    <td><%= link_to 'Show', listing %></td>
-    <td><%= link_to 'Edit', edit_listing_path(listing) %></td>
-    <td><%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
+  </li>
+  <% end %>
+  </ul>
+</div>
 
 <%= link_to 'New Listing', new_listing_path %>

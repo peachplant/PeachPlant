@@ -11,7 +11,16 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226015304) do
+ActiveRecord::Schema.define(:version => 20120226055137) do
+
+  create_table "listing_images", :force => true do |t|
+    t.text     "description"
+    t.integer  "listing_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "listing_images", ["listing_id"], :name => "index_listing_images_on_listing_id"
 
   create_table "listings", :force => true do |t|
     t.string   "title"
