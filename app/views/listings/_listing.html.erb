@@ -1,6 +1,7 @@
+<!-- TODO: add link in divs below image -->
 <li>
-  <%= link_to('Show', listing) %>
-    <%= show_image listing.primary_image_id %>
+  <% @image_tag = show_image listing.primary_image_id %>
+  <%= link_to(@image_tag, listing) %>
     <div><span><%= listing.title %></span><span><%= listing.price %></span></div>
 
 </li>
