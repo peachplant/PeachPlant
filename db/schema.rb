@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120226055137) do
+ActiveRecord::Schema.define(:version => 20120226073048) do
 
   create_table "listing_images", :force => true do |t|
     t.text     "description"
@@ -27,8 +27,9 @@ ActiveRecord::Schema.define(:version => 20120226055137) do
     t.text     "description"
     t.float    "price"
     t.integer  "user_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+    t.integer  "primary_image_id"
   end
 
   add_index "listings", ["user_id"], :name => "index_listings_on_user_id"

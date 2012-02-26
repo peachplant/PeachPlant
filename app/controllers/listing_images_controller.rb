@@ -23,15 +23,6 @@ class ListingImagesController < ApplicationController
     end
   end
 
-  def show_for_listing
-    @listing_images = ListingImage.find_all_by_listing_id(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @listing_images }
-    end
-  end
-
   # GET /listing_images/new
   # GET /listing_images/new.json
   def new
@@ -92,4 +83,6 @@ class ListingImagesController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+
 end
