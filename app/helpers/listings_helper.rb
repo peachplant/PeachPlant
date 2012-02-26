@@ -1,21 +1,26 @@
 module ListingsHelper
 
-  # @return [String]
-  def get_file_path(image_id)
-    @filename = "#{image_id}.png"
-    @asset_path = image_path "listings/#{@filename}"
+  #filename of image to display if no image is found
+  IMAGE_NOT_FOUND = "image_not_found.jpg"
 
-    return @asset_path
+  #returns the file path for a listing image_id
+  def get_file_path(image_id)
+    if image_id.nil?
+      IMAGE_NOT_FOUND
+    else
+      @filename = "#{image_id}.png"
+      image_path "listings/#{@filename}"
+    end
   end
 
-  def show_primary_image(listing)
-   # if listing.respond_to? primary_image_id
-      @image_path = get_file_path listing.primary_image_id
-      @image_tag = image_tag @image_path
-
-      return @image_tag
-    #else
-    #  echo image_tag ""
-    #end
+  #returns the image tag for an listing image id
+  #TODO: replace image_not_found with stock photo
+  def show_image(image_id)
+    if image_id.nil?
+      image_tag IMAGE_NOT_FOUND
+    else
+      @image_path = get_file_path image_id
+      image_tag @image_path
+    end
   end
 end
