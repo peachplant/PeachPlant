@@ -4,15 +4,9 @@
   <ul>
   <% @listings.each do |listing| %>
   <li>
-    <%= link_to('Show', listing) do %>
-        <%= image_tag(listing.image.url, alt => 'alt') %>
-        <%= content_tag(:span, listing.title) + content_tag(:span, listing.price) %>
-    <%= end %>
-
-    <%= listing.description %>
-    <%= listing.user.email %>
-    <%= link_to 'Edit', edit_listing_path(listing) %>
-    <%= link_to 'Destroy', listing, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to('Show', listing) %>
+      <img src="" alt=""/>
+      <div><span><%= listing.title %></span><span><%= listing.price %></span></div>
 
   </li>
   <% end %>

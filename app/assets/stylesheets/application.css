@@ -109,12 +109,12 @@ h2 { font-weight: normal; font-size: 18px; color: #333; padding-left: 25px; }
 #search-results ul li div span:nth-child(2) { float: right; }
 
 /* Listing Page Styles */
-#listing #listing-header{font-weight: normal; font-size: 18px; color: #333; width: 100%;}
+#listing #listing-header{font-weight: normal; margin: 10px 0px 0px 0px; font-size: 22px; color: #333;  height: 30px;}
 #listing #listing-header #title{float: left;}
 #listing #listing-header #price{float: right;}
-#listing #listing-image { width:250px; height: 250px; margin: 10px 26px 26px 0px; border-radius: 15px; display: block; float: left;}
+#listing #listing-image { width:250px; height: 250px; margin: 0px 26px 26px 0px; border-radius: 15px; display: block; float: left;}
 #listing img { height: 250px; width: 250px; border-radius: 5px;}
-#listing #listing-desc { float: right; }
+#listing #listing-desc {}
 
 /* Footer Styles */
 footer { color: #a0a0a0; font-size: 11px; padding: 5px 0; margin: 0; float: left; clear: both; text-align: right; width: 100%; }

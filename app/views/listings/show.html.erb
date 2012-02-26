@@ -1,25 +1,14 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @listing.title %>
-</p>
+<div id="listing">
+  <div id="listing-image"><img src="img/jeans.jpg" alt="Jeans" /></div>
+  <div id="listing-header">
+    <span id="title"><%= @listing.title %></span>
+    <span id="price"><%= @listing.price %></span>
+  </div>
 
-<p>
-  <b>Description:</b>
-  <%= @listing.description %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @listing.price %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @listing.user %>
-</p>
-
+  <span id="listing-desc"><%= @listing.description %></span>
+</div>
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |
 <%= link_to 'Back', listings_path %>
