@@ -3,12 +3,7 @@
 <div id="search-results">
   <ul>
   <% @listings.each do |listing| %>
-  <li>
-    <%= link_to('Show', listing) %>
-      <img src="" alt=""/>
-      <div><span><%= listing.title %></span><span><%= listing.price %></span></div>
-
-  </li>
+    <%= render listing %>
   <% end %>
   </ul>
 </div>

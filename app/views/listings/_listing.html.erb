@@ -1,21 +1,6 @@
-<div class="listing">
-  <p>
-    <b>Title:</b>
-    <%= listing.title %>
-  </p>
+<li>
+  <%= link_to('Show', listing) %>
+    <img src="" alt=""/>
+    <div><span><%= listing.title %></span><span><%= listing.price %></span></div>
 
-  <p>
-    <b>Description:</b>
-    <%= listing.description %>
-  </p>
-
-  <p>
-    <b>Price:</b>
-    <%= listing.price %>
-  </p>
-
-  <p>
-    <b>User:</b>
-    <%= listing.user.email %>
-  </p>
-</div>
+</li>

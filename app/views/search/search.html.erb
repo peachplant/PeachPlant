@@ -2,6 +2,10 @@
 
 <h2><%= @query %></h2>
 
-<% @results.each do |listing| %>
-  <%=  render listing %>
-<% end %>
+<div id="search-results">
+  <ul>
+    <% @results.each do |listing| %>
+      <%=  render listing %>
+    <% end %>
+  </ul>
+</div>
