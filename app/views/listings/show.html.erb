@@ -1,24 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Title:</b>
-  <%= @listing.title %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @listing.description %>
-</p>
-
-<p>
-  <b>Price:</b>
-  <%= @listing.price %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%= @listing.user %>
-</p>
+<%= render @listing %>
 
 
 <%= link_to 'Edit', edit_listing_path(@listing) %> |

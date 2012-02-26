@@ -3,3 +3,9 @@
 
 <p>User: <%= @user.email %></p>
 <p>First name: <%= @user.first_name %></p>
+
+<h2>My Listings</h2>
+
+<% @user.listings.each do |listing| %>
+  <%=  render listing %>
+<% end %>
