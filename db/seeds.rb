@@ -11,3 +11,12 @@ User.create(:email => "test@test.com",
             :last_name => "Smith",
             :password => "testing",
             :password_confirmation => "testing")
+
+@test_user_id = User.find_by_email "test@test.com"
+
+(1..8).each  do|i|
+  Listing.create(title: "My Pants ##{i}",
+               description: "They have a small stain where I shat meself.",
+               price: 10.0,
+               user_id: @test_user_id)
+end
