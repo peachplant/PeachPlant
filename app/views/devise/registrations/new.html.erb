@@ -10,6 +10,14 @@
           <%= f.email_field :email, :placeholder => "youremail@example.com" %>
         </li>
         <li>
+          <%= f.label :first_name %>
+          <%= f.text_field :first_name, :placeholder => "First name" %>
+        </li>
+        <li>
+          <%= f.label :last_name %>
+          <%= f.text_field :last_name, :placeholder => "Last Name" %>
+        </li>
+        <li>
           <%= f.label :password %>
           <%= f.password_field :password, :placeholder => "Enter your password" %>
         </li>
