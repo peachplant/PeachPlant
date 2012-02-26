@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <div id="listing">
-  <div id="listing-image"><img src="img/jeans.jpg" alt="Jeans" /></div>
+  <div id="listing-image"><%= show_image @listing.primary_image_id %></div>
   <div id="listing-header">
     <span id="title"><%= @listing.title %></span>
     <span id="price"><%= @listing.price %></span>
