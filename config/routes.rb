@@ -9,7 +9,7 @@ PeachPlant::Application.routes.draw do
 
   match "/search" => "search#search", :as => :search
 
-  root :to => "home#index"
+  root :to => "listings#index"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
