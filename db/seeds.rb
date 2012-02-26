@@ -20,3 +20,4 @@ User.create(:email => "test@test.com",
                price: 10.0,
                user_id: @test_user_id)
 end
+
