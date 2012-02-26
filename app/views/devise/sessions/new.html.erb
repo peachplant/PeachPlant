@@ -5,11 +5,11 @@
       <ol>
         <li>
           <%= f.label :email %>
-          <%= f.email_field :email %>
+          <%= f.email_field :email, :placeholder => "user@domain.com" %>
         </li>
         <li>
           <%= f.label :password %>
-          <%= f.password_field :password %>
+          <%= f.password_field :password, :placeholder => "Password" %>
         </li>
 
         <% if devise_mapping.rememberable? -%>

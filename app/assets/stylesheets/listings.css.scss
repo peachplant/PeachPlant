@@ -1,3 +1,8 @@
-// Place all the styles related to the Listings controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Listing Page Styles */
+
+#listing #listing-header{font-weight: normal; margin: 10px 0px 0px 0px; font-size: 22px; color: #333;  height: 30px;}
+#listing #listing-header #title{float: left;}
+#listing #listing-header #price{float: right;}
+#listing #listing-image { width:250px; height: 250px; margin: 0px 26px 26px 0px; border-radius: 15px; display: block; float: left;}
+#listing img { height: 250px; width: 250px; border-radius: 5px;}
+#listing #listing-desc {}

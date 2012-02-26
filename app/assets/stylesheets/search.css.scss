@@ -1,3 +1,12 @@
-// Place all the styles related to the Search controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+/* Search Results Styles */
+
+#search-results ul { list-style-type: none; margin: 0; padding: 0; }
+#search-results ul li { float: left; width:250px; height: 250px; margin: 10px 26px 26px 0px; border-radius: 15px; display: block; }
+#search-results ul li:nth-child(4n) { margin-right: 0; }
+#search-results ul li a { color: #fff; font-size: 13px; }
+#search-results ul li a:hover { color: #000; font-size: 13px; }
+#search-results ul li img { height: 250px; width: 250px; border-radius: 5px; }
+#search-results ul li div { position: absolute; width: 250px; background-color: #666; height: 22px; margin-top: -22px; opacity: 0.8; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; }
+#search-results ul li div span { padding: 0 10px; line-height: 22px; }
+#search-results ul li div span:nth-child(1) { float: left; }
+#search-results ul li div span:nth-child(2) { float: right; }
