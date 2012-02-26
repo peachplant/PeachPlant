@@ -2,7 +2,7 @@
   <div id="right-box">
     <div id="user-form">
       <% if user_signed_in? %>
-          <%= link_to current_user.email, "#" %>
+          <%= link_to current_user.first_name + "'s account", current_user %>
           <%= link_to('Edit account', edit_user_registration_path) %>
           <%= link_to('Logout', destroy_user_session_path, :method=>'delete') %>
       <% else %>
