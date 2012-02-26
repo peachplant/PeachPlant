@@ -5,7 +5,7 @@ PeachPlant::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   devise_for :users, :controllers => { :registrations => "registrations" }
-  match "/users/:id" => "users#show"
+  match "/users/:id" => "users#show", :as => :user
 
   root :to => "home#index"
 
