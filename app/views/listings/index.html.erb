@@ -4,7 +4,10 @@
   <ul>
   <% @listings.each do |listing| %>
   <li>
-    <%= link_to(image_tag('peachie.png', alt => '') + content_tag(:span, listing.title) + content_tag(:span, listing.price), 'Show', listing )%>
+    <%= link_to('Show', listing) do %>
+        <%= image_tag(listing.image.url, alt => 'alt') %>
+        <%= content_tag(:span, listing.title) + content_tag(:span, listing.price) %>
+    <%= end %>
 
     <%= listing.description %>
     <%= listing.user.email %>
