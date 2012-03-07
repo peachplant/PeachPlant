@@ -1,5 +1,6 @@
 PeachPlant::Application.routes.draw do
 
+  resources :attachments
   resources :listings
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'

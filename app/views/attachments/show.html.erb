@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+  <div>
+    <span><%= @attachment.description %></span>
+    <span><%= image_tag @attachment.file.url %></span>
+    <span><%= image_tag @attachment.file.url(:medium) %></span>
+    <span><%= image_tag @attachment.file.url(:thumb) %></span>
+  </div>
+

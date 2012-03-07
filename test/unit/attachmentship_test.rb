@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ListingImageTest < ActiveSupport::TestCase
+class AttachmentshipTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
