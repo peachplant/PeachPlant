@@ -6,6 +6,11 @@
 
 <h2>My Listings</h2>
 
-<% @user.listings.each do |listing| %>
-  <%=  render listing %>
-<% end %>
+<div id="search-results">
+  <ul>
+    <% @user.listings.each do |listing| %>
+        <%=  render listing %>
+    <% end %>
+  </ul>
+</div>
+

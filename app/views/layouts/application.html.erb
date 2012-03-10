@@ -6,13 +6,10 @@
 <head>
   <title>PeachPlant</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag "1140", :media => "all" %>
-  <%= stylesheet_link_tag "ie", :media => "all" %>
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "css3-mediaqueries" %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body id="<%=controller.controller_name%>-<%=controller.action_name%>">
 
 <!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
 

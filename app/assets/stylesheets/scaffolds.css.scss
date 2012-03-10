@@ -1,9 +1,26 @@
 body {
   background-color: #fff;
-  color: #333;
+  color: #666;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px; }
+
+h1,h2,h3,h4 {
+  color: #333;
+}
+
+h2 {
+  font-size: 24px;
+  padding: 5px;
+  margin: 0px 0px 0px 20px;
+}
+
+h3 {
+  font-size: 18px;
+  padding: 5px;
+  margin: 0px;
+  font-weight: normal;
+}
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -31,26 +48,32 @@ div {
   color: green; }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: red;
-  display: table; }
+  input {
+    border: 1px solid red !important;
+  }
+  label {
+    color: #ff6666 !important;
+  }
+}
 
 #error_explanation {
-  width: 450px;
-  border: 2px solid red;
+  width: 65%;
+  border: 1px solid red;
   padding: 7px;
   padding-bottom: 0;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
+  margin: 0 auto 20px auto;
+  background-color: #ffcccc;
+  border-radius: 5px;
   h2 {
-    text-align: left;
-    font-weight: bold;
+    text-align: center;
+    font-weight: normal;
     padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff; }
+    margin: 0;
+    font-size: 18px;
+    color: #ff0000; }
   ul li {
     font-size: 12px;
-    list-style: square; } }
+    list-style: square;
+    color: #765454;
+  }
+}
