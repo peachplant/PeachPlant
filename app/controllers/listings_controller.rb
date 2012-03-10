@@ -39,6 +39,11 @@ class ListingsController < ApplicationController
     @listing = Listing.find(params[:id])
   end
 
+  # GET /listing/1/delete
+  def delete
+    @listing = Listing.find(params[:id])
+  end
+
   # POST /listings
   # POST /listings.json
   def create

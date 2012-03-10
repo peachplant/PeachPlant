@@ -10,5 +10,6 @@
   <span id="listing-desc"><%= @listing.description %></span>
 </div>
 
-<%= link_to 'Edit', edit_listing_path(@listing) %> |
+<%= link_to 'Edit', edit_listing_path(@listing) %>
+<%= link_to 'Delete', delete_listing_path(@listing) %>
 <%= link_to 'Back', listings_path %>

@@ -1,5 +1,7 @@
 <h2>Listings</h2>
 
+<%= link_to 'New Listing', new_listing_path %>
+
 <div id="search-results">
   <ul>
   <% @listings.each do |listing| %>
@@ -7,5 +9,3 @@
   <% end %>
   </ul>
 </div>
-
-<%= link_to 'New Listing', new_listing_path %>
